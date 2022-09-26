@@ -1,10 +1,10 @@
 <!-- Tertiary content (Breadcrumb, Resource links, etc.) -->
 <div class="row">
-<div class="medium-12 columns">
-<div class="page-tertiary tertiary-header">
-  <div class="row">
-    <div class="medium-6 columns">
-      <!-- Breadcrumb -->
+    <div class="medium-12 columns">
+        <div class="page-tertiary tertiary-header">
+            <div class="row">
+                <!-- div class="medium-6 columns">
+      < Breadcrumb >
       <nav class="tertiary-nav">
         {% if page.section == "locations" %}<a href="/locations/">Locations</a>{% endif %}
         {% if page.section == "watch" %}<a href="/watch/">Watch</a>{% endif %}
@@ -16,44 +16,30 @@
         {% if page.section == "announcements" %}<a href="/announcements/">Announcements</a>{% endif %}
         <a class="current" href="#">{{ page.title }}</a>
       </nav>
-    </div>
-    <div class="medium-6 columns tertiary-resources text-right">
-      {% if page.section == "watch" %}
-      <!-- Watch Options -->
-      <div class="hide-for-small">
-        <a href="#"
-           data-dropdown="drop"
-           class="watch-resources button tiny dropdown"
-           onclick="ga('send', 'event', 'Series', 'Click', 'Resources Expand');">
+    </div-->
+                <div class="medium-6 columns tertiary-resources text-right">
+                    {% if page.section == "watch" %}
+                    <!-- Watch Options -->
+                    <div class="hide-for-small">
+                        <a href="#" data-dropdown="drop" class="watch-resources button tiny dropdown" onclick="ga('send', 'event', 'Series', 'Click', 'Resources Expand');">
            Get Resources
         </a>
-        <br />
-      </div>
-      {% include watch-resources.html %}
-      {% endif %}
-
-      {% if page.section == "locations" %}
-      <!-- Watch Options -->
-      <div class="hide-for-small">
-        <a href="#"
-           data-dropdown="drop"
-           data-set-campus="{{page.location-id}}"
-           class="locations-mycampus button tiny"
-           onclick="ga('send', 'event', 'Locations', 'Click', 'Campus Mine');">
+                        <br />
+                    </div>
+                    {% include watch-resources.html %} {% endif %} {% if page.section == "locations" %}
+                    <!-- Watch Options -->
+                    <div class="hide-for-small">
+                        <a href="#" data-dropdown="drop" data-set-campus="{{page.location-id}}" class="locations-mycampus button tiny" onclick="ga('send', 'event', 'Locations', 'Click', 'Campus Mine');">
            Save as your campus?
         </a>
 
-        <a href="#"
-           data-dropdown="drop"
-           data-unset-campus
-           class="locations-mycampus button tiny secondary"
-           onclick="ga('send', 'event', 'Locations', 'Click', 'Campus Not Mine');">
+                        <a href="#" data-dropdown="drop" data-unset-campus class="locations-mycampus button tiny secondary" onclick="ga('send', 'event', 'Locations', 'Click', 'Campus Not Mine');">
            Not your campus?
         </a>
-      </div>
-      {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-</div>
 </div>
