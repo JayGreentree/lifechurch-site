@@ -6,6 +6,6 @@
 
 - active: true
   type: notice
-  icon: calendar
-  message: View additional Easter service times.
-  url: /easter/
+  icon: maintenance
+  message: Website maintenance in progress
+  url: 
